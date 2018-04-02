@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CONTACTS&nbsp;|&nbsp;FOOTY</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="row flex-between">
+            <a href="index.html" class="logo">FOOTY</a>
+            <nav class="nav main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col d-grow">
+                <h2>CONTACT&nbsp;US</h2>
+                <form action="#" method="post">
+                    <div class="row flex-between">
+                        <div class="input-wrapper mt mb">
+                            <input id="name" type="text" name="customer_name" placeholder="Your name" required>
+                            <label for="name" class="alter-label">Your name</label>
+                        </div>
+                        <div class="input-wrapper mt mb">
+                            <input id="email" type="email" name="customer_email" placeholder="Your email" required>
+                            <label for="email" class="alter-label">Your email</label>
+                        </div>
+                        <!--<div class="input-wrapper mt mb">-->
+                            <!--Your name-->
+                            <!--<input type="text" name="customer_name" placeholder="John" required>-->
+                        <!--</div>-->
+                        <!--<label class="input-wrapper mt mb">-->
+                            <!--Your email-->
+                            <!--<input type="email" name="customer_email" placeholder="example@email.com" required>-->
+                        <!--</label>-->
+                        <label class="select-wrap mt mb">
+                            <select name="subject" required>
+                                <option value="" disabled selected hidden>Select subject</option>
+                                <option value="General">General</option>
+                                <option value="Returns & Delivery">Returns&nbsp;&amp;&nbsp;Delivery</option>
+                                <option value="Customer support">Customer support</option>
+                                <option value="Advertising & Partnerships">Advertising&nbsp;&amp;&nbsp;Partnerships</option>
+                            </select>
+                        </label>
+                    </div>
+                    <label class="message-wrap">Message <br><textarea name="customer_email" rows="5" required></textarea></label>
+                    <div class="button-block mt">
+                        <button type="submit">Submit form</button>
+                        <button type="reset">Reset form</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col grow">
+                <h2 class="mt-lg">CONTACT DETAILS</h2>
+                <div class="row flex-column flex-between">
+                    <div class="inner-el">
+                        <h3>POST</h3>
+                        <p>
+                            The Footy Club Limited <br>
+                            Chase House<br>
+                            Rainton Bridge<br>
+                            DH4 5RA<br>
+                            United Kingdom<br>
+                        </p>
+                    </div>
+                    <div class="inner-el">
+                        <h3>PHONE</h3>
+                        <p><a href="tel:+4401913051078">+44&nbsp;(0)191&nbsp;305&nbsp;1078</a></p>
+                    </div>
+                    <div class="inner-el">
+                        <h3>EMAIL</h3>
+                        <p><a href="mailto:info@footy.com">info@footy.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A1a98a4477b2be7df9c12970094e9b62061b299bc911fcff6a503b9ef64ba83fa&amp;width=100%25&amp;height=374&amp;lang=en_FR&amp;scroll=true"></script>
+<footer>
+    <div class="container">
+        <div class="row">
+            <p>&copy;All rights reserved</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

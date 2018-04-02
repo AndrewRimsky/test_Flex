@@ -1,0 +1,454 @@
+body {
+    background-color: #f8f8f8;
+    font-family: Helvetica, 'Futura PT', Futura, serif;
+}
+/* Homework 5 styles */
+* {
+    box-sizing: border-box;
+}
+.container{
+    /* это на самом деле ширина для мобильного */
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+.container .row{
+    flex-wrap: wrap;
+    display: flex;
+}
+.col {
+    padding: 0 15px;
+}
+.grow {
+    flex-grow: 1;
+}
+.d-grow{
+    flex-grow: 2;
+}
+.product-col {
+    flex-basis: 100%;
+}
+.flex-between{
+    justify-content: space-between;
+}
+.even {
+    flex-basis: 100%;
+}
+.smaller-md{
+    flex-grow: 2;
+}
+footer .row{
+    justify-content: flex-end;
+}
+/* end Homework 5 styles */
+
+input, select, textarea {
+    display: block;
+}
+a {
+    display: inline-block;
+    color: #333333;
+    text-decoration: none;
+}
+.mt{
+    margin-top: 30px;
+}
+.mt-lg{
+    margin-top: 50px;
+}
+.mb{
+    margin-bottom: 30px;
+}
+h1 {
+    font-size: 1.6em;
+}
+h2 {
+    /* Исходя из контекста посчитал в em */
+    font-size: 1.125em;
+    margin-top: 30px;
+}
+h3{
+    font-size: 0.9em;
+    margin: 10px 0;
+}
+.img-responsive{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.heading{
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+h1, h2 {
+    position: relative;
+    margin-bottom: 30px;
+}
+h1:after, h2:after{
+    content: '';
+    width: 40px;
+    height: 3px;
+    background-color: #333;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+header {
+    border-bottom: 1px solid #333333;
+    padding: 20px 0;
+    background-color: #242424;
+}
+footer {
+    color: #f8f8f8;
+    background-color: rgb(17,17,17);
+    padding: 25px 45px;
+}
+nav ul {
+    line-height: 1.5em;
+    list-style: none;
+    margin: 0;
+}
+nav ul > li {
+    position: relative;
+    display: inline-block;
+}
+nav ul > li:not(:last-child){
+    margin-right: 20px;
+}
+header a {
+    color: #f8f8f8;
+}
+header li a:after {
+    content: ' ';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    background-color: #f75d5d;
+    width: 60%;
+    height: 2px;
+    margin-left: -30%;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    visibility: hidden;
+    transition: all ease-in-out 0.2s;
+}
+header li a:hover:after {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+main {
+    padding: 50px 0;
+}
+main p:not([class]){
+    text-align: justify;
+}
+.grid {
+    display: grid;
+}
+.products-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(300px, auto);
+    grid-column-gap: 30px;
+}
+.contacts-grid{
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 50px;
+    grid-auto-rows: minmax(300px, auto);
+}
+.form-grid {
+    grid-column-gap: 35px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(50px, auto);
+    grid-row-gap: 35px;
+}
+.product-item-grid{
+    grid-template-columns: 1fr;
+}
+.form-grid .large-cell {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+.product:hover {
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+.product {
+    margin-bottom: 30px;
+    background: white;
+    padding: 20px 10px;
+    border-radius: 4px;
+    transition: all ease-in-out 0.2s;
+}
+.product img{
+    border: 1px solid #666666;
+}
+.product .price, .product .product-type, .product .title{
+    font-size: 0.8em;
+}
+.product .title{
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+.price, .product-type {
+    margin: 5px 0;
+    color: #666
+}
+label {
+    font-weight: bold;
+}
+input, select, textarea, button{
+    outline: none;
+}
+input, select, textarea {
+    color: #333333;
+    font-size: 1.1em;
+    padding: 10px 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+select:not([class]), textarea, input{
+    min-width: 100%;
+}
+select{
+    padding: 8px 10px;
+    border-color: rgb(238, 238, 238);
+    border-radius: 0px;
+    background-color: white;
+    -webkit-appearance: none;
+    position: relative;
+}
+.select-wrap{
+    position: relative;
+    display: inline-block;
+}
+.select-wrap:after{
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #333;
+    position: absolute;
+    right: 8%;
+    top: 55%;
+    pointer-events: none;
+}
+button {
+    text-transform: uppercase;
+    font-size: 0.9em;
+    transition: all ease-in-out 0.2s;
+    color: #f8f8f8;
+    background-color: #333;
+    margin-top: 20px;
+    padding: 8px 15px;
+    border: 2px solid #333;
+}
+button:hover {
+    background-color: transparent;
+    color: #333;
+}
+.small-select{
+    width: 80px;
+}
+.white-arrow:not(:last-of-type){
+    margin-right: 40px;
+}
+.select-wrap.white-arrow:after{
+    right: 10%;
+    top: 65%;
+}
+.short-desc{
+    margin: 40px 0;
+}
+.short-desc p {
+    color: #707070;
+    font-size:  0.875em;
+    font-style: italic;
+    line-height: 16px;
+}
+.full-desc p {
+    color: #484343;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5em;
+    text-align: left;
+}
+.info-head{
+    padding: 10px 10px;
+    font-size: 1.125em;
+    background-color: #eaeaea;
+    font-weight: 400;
+}
+.info-section ul{
+    list-style-type: none;
+    list-style-position: inside;
+    padding: 0;
+}
+.info-section ul li{
+    background-image: url("../img/icons/001-symbol@1.5x.png");
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    line-height: 24px;
+    margin-top: 10px;
+    color: #333333;
+    font-size: 0.9em;
+}
+
+ /* Homework 4 styles */
+.nav li a:hover {
+    color: #f75d5d;
+}
+.input-wrapper{
+    position: relative;
+    overflow: hidden;
+}
+.input-wrapper:after {
+    transition: all ease-in-out 0.3s;
+    bottom: 0;
+    content: '';
+    width: 100%;
+    height: 4px;
+    background-color: #f75d5d;
+    position: absolute;
+    left: 0;
+    transform: translateX(-100%);
+}
+.input-wrapper:focus-within:after {
+    transform: translateX(0);
+}
+input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 4px solid #333;
+}
+input::-webkit-input-placeholder {
+    color: transparent;
+}
+
+input:-ms-input-placeholder {
+    color: transparent;
+}
+
+input::-ms-input-placeholder {
+    color: transparent;
+}
+
+input::-moz-placeholder {
+    color: transparent;
+}
+
+input::placeholder {
+    color: transparent;
+}
+input:not(:placeholder-shown) ~ label {
+    bottom: 38px;
+    font-size: 0.8em;
+}
+.alter-label{
+    transition: all ease-in-out 0.2s;
+    font-weight: normal;
+    font-size: 1.1em;
+    position: absolute;
+    bottom: 24%;
+    left: 10px;
+}
+textarea, select {
+    border: 4px solid #333;
+}
+input[type='text'], textarea{
+    text-transform: capitalize;
+}
+input[type='email']:invalid{
+    color: #f75d5d;
+}
+select:required:invalid {
+    color: #666666;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid grey;
+}
+td, th {
+    text-align: center;
+    border: 1px solid grey;
+    padding: 10px 10px;
+}
+th {
+    background-color: #d0d0d0;
+}
+td {
+    font-size: 0.9em;
+}
+table tr:first-child th {
+    padding: 20px 10px;
+}
+.preview-block img {
+    border: 4px solid #333;
+    box-sizing: border-box;
+}
+.preview-block img:hover {
+    border-color: transparent;
+}
+.full-desc p:first-letter{
+    font-size: 1.5em;
+    color: black;
+}
+@media (min-width: 576px) {
+    .container {
+        width: 540px;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        width: 720px;
+    }
+    .product-col {
+        flex-basis: 50%;
+    }
+
+}
+@media screen and (min-width: 992px) {
+    .container{
+        width: 960px;
+    }
+    .product-col {
+        flex-basis: 33.3333%;
+    }
+    .even {
+        flex: 1;
+    }
+    .row.flex-column{
+        flex-flow: column nowrap;
+    }
+    .product-item-grid{
+        grid-column-gap: 35px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .expanded{
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+    main p:not([class]){
+        max-width: 80%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container{
+        width: 1140px;
+    }
+    .product-col {
+        flex-basis: 25%;
+    }
+    .smaller-md{
+        flex-grow: 1;
+    }
+}
